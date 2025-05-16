@@ -63,10 +63,10 @@ Missing vales and data type erros were present, they are solved with data cleani
 I used R for the process of cleaning the data and making sure it is prepared for analysis. R is able to handle large amaount of data and can process the data fast. R is also realible to keep documention for the projects. For Data Visualization I used the ready dataset in Tableau. 
 
 ## Step 4: Analyse
-The Analyis is [Folder] with explanation in comments.
+The Analyis is [Folder](https://github.com/nidhichavan9/Cyclistic/blob/main/cyclistic_main.R) with explanation in comments.
 
 ## Step 5: Share
- Here the link to visualization on [Tableau](https://github.com/nidhichavan9/Cyclistic/blob/main/cyclistic_main.R)
+ Here the link to visualization on [Tableau](https://public.tableau.com/app/profile/nidhi2228/viz/Cyclistic_16856019208150/Cyclistic)
  
 ## Step 6: Act
 Recommendations for the business
