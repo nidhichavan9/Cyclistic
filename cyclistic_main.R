@@ -26,14 +26,6 @@ May_2023 <- read.csv('C:\\Users\\Nidhi\\OneDrive\\Desktop\\Project_data\\cyclist
 June_2023 <- read.csv('C:\\Users\\Nidhi\\OneDrive\\Desktop\\Project_data\\cyclistic\\202305-divvy-tripdata.csv')
 July_2023 <- read.csv('C:\\Users\\Nidhi\\OneDrive\\Desktop\\Project_data\\cyclistic\\202306-divvy-tripdata.csv')
 
-#checking str type (can ignore)
-
-#str(July_2022)
-#July_2022$year <- format(
-#  July_2022$started_at, 
-#  "%Y"
-#)
-
 #Combining the data into one singular .csv file 
 
 rides_year <- bind_rows( July_2022, August_2022, September_2022, November_2022, December_2022, January_2023, Feburar_2023, March_2023,
@@ -50,18 +42,15 @@ str(rides_year)
 #data cleaning
 
 clean_rides_year <- drop_na(rides_year) 
-#this did not work because drop_na only removes NA values and my data set had empty values as seen during skim_without_charts
+#drop_na did not work because it only removes NA values and my data set had empty values as seen during skim_without_charts
 
-#this is were i figured out that drop_na did not work
 skim_without_charts(clean_rides_year) 
 
 #Made all the empty values into NA, ran skim function again to see if it worked and it did 
-clean_rides_year[clean_rides_year == ''] <- NA #dumb mistake here I wrote the old table name aka rides_year instead of clean_ride_years TT
+clean_rides_year[clean_rides_year == ''] <- NA 
 
 #ran drop_na and skim lines aka 37 and 41 again
 #successfully removed incomplete rows from the data set
-
-#THIS SECTION IS RIGHT FROM THE GUIDE. DO NOT INCLUDE IN THE FINAL DOC
 
 # check values for customer type and bike type
 table(clean_rides_year$rideable_type)
@@ -87,13 +76,8 @@ clean_rides_year %>%
   select(start_lat, start_lng, end_lat, end_lng) %>% 
   summary()
 
-#DONE, WILL INCLUDE SOME OF THIS AS IT IS QUITE IMPORTENT
 
 # find the duration(already found in time difference), distance, day, week, hour, month
-
-#change data type
-
-#CHANGE THIS CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 # Change started_at string type 
 #invalid 'trim' argument because the date time was in 'chr' data type
